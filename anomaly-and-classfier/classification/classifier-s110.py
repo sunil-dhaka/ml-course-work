@@ -51,7 +51,7 @@ mean(lst_accu_stratified)*100, '%')
 print('\nStandard Deviation:', stdev(lst_accu_stratified))
 
 # train on whole dataset
-classifier = DecisionTreeClassifier(random_state=1,criterion='entropy')
+classifier = DecisionTreeClassifier(random_state=1,criterion='gini',class_weight='balanced')
 clf=classifier.fit(X_train, y_train)
 
 # predict and save classes
